@@ -3,8 +3,21 @@
 {% block title %}Cart | {% endblock %}
 
 {% block content %}
+
+<style>
+
+       body {
+        font-family: Helvetica Neue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,sans-serif;
+        font-size: 11px;
+        background-color: #f7f7f7;
+    }
+
+
+</style>
+
     <div id="cartapp">
         <h1 class="title">Cart</h1>
+        <a href="{% url 'frontpage' %}" class="button is-danger">Continue Shopping</a>
 
         {% if cart %}
             <div v-if="products.length > 0">
