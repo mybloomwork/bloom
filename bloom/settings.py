@@ -44,7 +44,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'salesreportdynarielinnovations@gmail.com'
-EMAIL_HOST_PASSWORD = 'oluwadamilolA1@boy'
+EMAIL_HOST_PASSWORD = 'oluwadamilola1@boy'
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'cart'
