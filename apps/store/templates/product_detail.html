@@ -16,9 +16,10 @@
 
 <style>
     body {
-        font-family: "Roboto", sans-serif;
+        font-family: Helvetica Neue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,sans-serif;
         font-size: 12px;
         font-style:  normal;
+        font-color: dark;
         background-color: #f7f7f7;
     }
 
@@ -87,6 +88,11 @@
     box-sizing: border-box;
     box-shadow: 0 16px 48px #85adad;
     text-align: justify;
+}
+
+.control {
+margin: -10px;
+
 }
 
 .title{
@@ -204,7 +210,7 @@
         <div class="reviews-wrapper">
          <div class="container">
         <h1 class="title">{{ product.title }}</h1>
-        <h2 class="subtitle">₦{{ product.price|intcomma }}, Stars: {% if product.get_rating == 0 %}No ratings yet{% else %}{{ product.get_rating|floatformat:1 }}{% endif %}</h2>
+        <h2 class="title">₦{{ product.price|intcomma }}, Stars: {% if product.get_rating == 0 %}No ratings yet{% else %}{{ product.get_rating|floatformat:1 }}{% endif %}</h2>
               </div>
         </div>
 
@@ -382,7 +388,7 @@
         </div>
     </div>
 
- <h2 class="subtitle has-text-centered">Recently viewed products</h2>
+ <h2 class="title has-text-centered">Recently viewed products</h2>
 
     {% with recently_viewed_products as list_products %}
         {% include 'parts/product_list.html' %}
