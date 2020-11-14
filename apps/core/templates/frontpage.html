@@ -522,8 +522,40 @@ display: grid;
   <span class="dot"></span>
   <span class="dot"></span>
 </div>
+    <h1 class="title">{{category.title}}</h1>
+       <div class="card-content" class="responsive">
+        {% for product in products %}
+            <div class="column is-2 is-6-mobile">
+                <a href="{% url 'product_detail' product.category.slug product.slug %}" class="card-image">
+              <div class="card">
+                    <div class="card-image">
+                        <figure class="image">
+                    
+                            <img src="{{ product.thumbnail.url }}">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p>{{ product.title }}</p>
+                                <p>₦{{ product.price|intcomma }}</p>
+                            </div>
+                        </div>
+                    </div>
 
+                    <footer class="card-footer">
+                        <a href="{% url 'product_detail' product.category.slug product.slug %}"</a>
+                    </footer>
+                </div>
+            </div>
+        {% endfor %}
 </div>
+<div class="flex-container">
+    <img src="\media\uploads\frontpageimageflex.jpg">
+</div>
+</div>
+<hr>
+	       
 <script>
 var slideIndex = 0;
 showSlides();
